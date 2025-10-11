@@ -74,15 +74,30 @@ body{
                 }
             }
 
-            & input[type="submit"]{
-                font-size: 1.6rem;
-                font-weight: bold;
 
-                color: #fff;
-                background-color: #0056fb;
+            & .form-btn{
 
-                border: none;
+                position: relative;
+                & input[type="submit"] {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+            
+                    color: #fff;
+                    background-color: #0056fb;
+            
+                    border: none;
+
+                    width: 100%;
+                }
+
+                & img{
+                    position: absolute;
+                    right: -4.6rem;
+                    bottom: -0.9rem;
+                    opacity: 0.3;
+                }
             }
+            
 
             & .access-question{
                 font-size: 1.6rem;
@@ -95,6 +110,35 @@ body{
             }
 
             
+        }
+    }
+
+    & .infos{
+        width: 50%;
+        height: 100vh;
+
+        background-color: #0056fb;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .text-informations{
+            width: 48.7rem;
+
+            margin-top: 4rem;
+
+            color: #fff;
+
+            & h1{
+                font-size: 4.8rem;
+            }
+
+            & p{
+                font-size: 1.8rem;
+                margin-top: 2.5rem;
+            }
         }
     }
 }
