@@ -350,7 +350,7 @@ body{
 
 
     #container {
-        
+        flex-basis:content;
         width: 70%;
 
         & + .column{
