@@ -12,36 +12,33 @@
     <title>Page de cadastro</title>
 </head>
 <body>
-    <div class="main">
-        <div class="container">
+    <main class="main">
+        <section class="left-card">
+            <h1>Nova conta</h1>
             <form action="#">
-                <h1>Nova conta</h1>
-                <input type="text" name="nome" placeholder="Nome completo">
-                <input type="email" name="email" placeholder="Digite seu email">
-                <input type="password" name="password" placeholder="Digite sua senha">
+                <input class="input" type="text" name="nome" placeholder="Nome completo">
+                <input class="input" type="email" name="email" placeholder="Digite seu email">
+                <input class="input" type="password" name="password" placeholder="Digite sua senha">
                 <div class="check-in">
                     <input type="checkbox" name="termos" id="termos">
                     <label for="termos">Concordo com os termos</label>
                 </div>
-                <div class="form-btn">
-                    <input type="submit" value="Criar conta">
-                    <img src="./assets/code.svg" alt="">
-                    </div>
-                    <p class="access-question">Já possui uma conta? <a href="login.html">Faça Login.</a></p>
-            </form>
-            
-        </div>
-        <div class="infos">
-            <div>
-                <img src="./assets/info.png" alt="">
+                <input class="form-btn" type="submit" value="Criar conta">
+                </form>
+                <p class="access-question">Já possui uma conta? <a href="login.html">Faça Login.</a></p>
             </div>
+            </section>
+            <section class="right-card">
+            
+                <img src="./assets/info.png" alt="">
+        
             <div class="text-informations">
-                <h1>Leve sua carreira ao<br>próximo nível</h1>
+                <h2>Leve sua carreira ao próximo nível.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat molestiae sit quam provident voluptates a
                     delectus atque commodi porro. Aut quaerat animi incidunt commodi. Quis ut laboriosam tempore inventore nemo?
                 </p>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 </html>

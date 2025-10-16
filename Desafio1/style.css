@@ -25,18 +25,25 @@ body{
     justify-content: center;
     align-items: center;
 
-    & .container {
+    & .left-card {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        flex-grow: 1;
-        width: 50%;
+        height: 100vh;
+        
+            padding: 13.8rem;
+        
+            position: relative;
+        
+            flex: 1;
 
         & h1{
             font-size: 4.2rem;
+            width: 100%;
 
+            max-width: 56rem;
             margin-bottom: 2.5rem;
         }
 
@@ -44,9 +51,13 @@ body{
             display: flex;
             flex-direction: column;
 
-            width: 44rem;
+            width: 100%;
+
+            max-width: 56rem;
+
+            z-index: 9;
             
-            & input[type="text"],& input[type="password"], & input[type="email"],& input[type="submit"]{
+            & .input{
                 height: 4.9rem;
 
                 margin-bottom: 2.5rem;
@@ -74,49 +85,65 @@ body{
                 }
             }
 
-
             & .form-btn{
 
-                position: relative;
-                & input[type="submit"] {
-                    font-size: 1.6rem;
-                    font-weight: bold;
-            
-                    color: #fff;
-                    background-color: #0056fb;
-            
-                    border: none;
+                height: 4.9rem;
+                
+                margin-bottom: 2.5rem;
+                padding: 1.5rem 1.9rem;
 
-                    width: 100%;
-                }
-
-                & img{
-                    position: absolute;
-                    right: -4.6rem;
-                    bottom: -0.9rem;
-                    opacity: 0.3;
-                }
-            }
-            
-
-            & .access-question{
                 font-size: 1.6rem;
                 font-weight: bold;
+            
+                color: #fff;
+                background-color: #0056fb;
+            
+                border: none;
+                border-radius: .4rem;
+            
+                width: 100%;
 
-                & a{
-                    font-weight: 400;
-                }
-                
+                transition: background-color 0.7s linear;
             }
 
+            & .form-btn:hover {
+                background-color: #008afb;                
+            }
+
+        }
+        & form::before{
+            content: '';
+            position: absolute;
+            background-image: url(./assets/code.svg);
+            background-size: 9rem;
+            background-repeat: no-repeat;
+            z-index: 1;
+            width: 9rem;
+            height: 9rem;
+            opacity: 0.5;
+            bottom: 19rem;
+            right: 10.2rem;
+        }
+
+        & .access-question {
+            font-size: 1.6rem;
+            font-weight: bold;
+
+            width: 100%;
+            max-width: 56rem;
+                
+            & a {
+                font-weight: 400;
+            }
             
         }
-    }
+    }   
 
-    & .infos{
-        width: 50%;
+        & .right-card {
+                    flex: 1;
         height: 100vh;
 
+        padding: 23.6rem 9.8rem;
         background-color: #0056fb;
 
         display: flex;
@@ -124,21 +151,94 @@ body{
         justify-content: center;
         align-items: center;
 
+        & img {
+                width: 100%;
+                max-width: 40rem;
+            }
         & .text-informations{
-            width: 48.7rem;
+            width: 100%;
 
             margin-top: 4rem;
 
             color: #fff;
 
-            & h1{
+            & h2 {
+                max-width: 40rem;
                 font-size: 4.8rem;
             }
 
             & p{
+                max-width: 40rem;
                 font-size: 1.8rem;
                 margin-top: 2.5rem;
             }
         }
     }
 }
+
+@media (max-width: 36rem){
+    .main{
+        flex-direction: column;
+        height: auto;
+
+        & .left-card{
+            padding: 18.9rem 1.5rem 9rem 1.5rem;
+            width: 100%;
+
+            & h1{
+                font-size: 3.2rem;
+            }
+
+            & form{
+                & .input::placeholder{
+                    font-size: 1.3rem;
+                }
+
+                & .check-in{
+                    & input[type="checkbox"]{
+                        width: 1.7rem;
+                        height: 1.7rem;
+                    }
+
+                    & label{
+                        font-size: 1.2rem;
+                    }
+                }
+
+                & .form-btn{
+                    font-size: 1.3rem;
+                }
+            }
+
+            & form::before {
+                display: none;
+            }
+
+            & .access-question{
+                font-size: 1.2rem;
+            }
+        }
+
+        & .right-card{
+            width: 100%;
+
+            height: 100vh;
+
+            padding: 7.2rem 2.2rem;
+
+            & .text-informations{
+                & h2{
+                    width: 100%;
+                    padding: 0 1rem;
+
+                    font-size: 4rem;
+                }
+
+                & p{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
