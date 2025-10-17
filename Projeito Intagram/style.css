@@ -38,122 +38,123 @@ body{
             width: 50%;
         }
         
-            & .left {
-                background-image: url(./assets/main-foto.png);
-                background-size: 45rem;
-                background-repeat: no-repeat;
-                background-position: center;
-                height: 60rem;
-                margin-bottom: 5rem;
+        & .left {
+            background-image: url(./assets/main-foto.png);
+            background-size: 45rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 60rem;
+            margin-bottom: 5rem;
+            display: block;
+        }
+        
+        & .right {
+            padding-left: 2rem;
+    
+            & .login-panel {
+                background-color: #fff;
+                border: 1px solid #e6e6e6;
+                text-align: center;
+                padding: 2rem 0;
+    
+                & .logo {
+                    & .logo-img {
+                        width: 17.5rem;
+                    }
+                }
+    
             }
-        
-            & .right {
-                padding-left: 2rem;
-        
-                & .login-panel {
-                    background-color: #fff;
-                    border: 1px solid #e6e6e6;
-                    text-align: center;
-                    padding: 2rem 0;
-        
-                    & .logo {
-                        & .logo-img {
-                            width: 17.5rem;
-                        }
-                    }
-        
-                }
-        
-                & form {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-        
-                    & input[type="password"],
-                    & input[type="text"] {
-                        background-color: #ffffff;
-                        border: 1px solid rgb(236, 234, 234);
-                        height: 4.8rem;
-                        border-radius: .4rem;
-                        margin-top: 1rem;
-                        padding: 1rem;
-                        font-size: 1.3rem;
-                        width: 32rem;
-                        color: #000;
-                    }
-        
-                    & input[type="password"]::placeholder,
-                    & input[type="text"]::placeholder {
-                        color: rgb(165, 164, 164);
-                    }
-        
-                    & input[type="password"]::placeholder,
-                    & input[type="text"]::placeholder {
-                        color: rgb(165, 164, 164);
-                    }
-        
-                    & input[type="password"]:focus,
-                    & input[type="text"]:focus {
-                        outline: 0;
-                        border: 1px solid #a1a1a1;
-                    }
-        
-                    & input[type="submit"] {
-                        width: 32rem;
-        
-                        margin-top: 1rem;
-                        height: 3rem;
-        
-                        border: none;
-                        border-radius: .6rem;
-        
-                        background-color: #3c96ed;
-                        color: #fff;
-        
-                        font-size: 1.6rem;
-                        font-weight: bold;
-        
-                        cursor: pointer;
-                    }
-                }
-        
-                & .infobox {
-                    background-color: #fff;
-                    height: 6rem;
-        
+    
+            & form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+                & input[type="password"],
+                & input[type="text"] {
+                    background-color: #ffffff;
                     border: 1px solid rgb(236, 234, 234);
-        
-                    margin: 1rem auto 0;
-        
-                    display: flex;
-        
-                    justify-content: center;
-                    align-items: center;
-        
-                    & p {
-        
-                        & a {
-                            font-weight: bold;
-                            user-select: none;
-                        }
-                    }
+                    height: 4.8rem;
+                    border-radius: .4rem;
+                    margin-top: 1rem;
+                    padding: 1rem;
+                    font-size: 1.3rem;
+                    width: 32rem;
+                    color: #000;
                 }
-        
-                & .get-app-panel {
-                    margin-top: 2rem;
-                    text-align: center;
-        
-                    & .app-buttons {
-                        margin-top: 1.6rem;
-        
-                        & img {
-                            height: 4rem;
-                            padding: 0 2px;
-                        }
+    
+                & input[type="password"]::placeholder,
+                & input[type="text"]::placeholder {
+                    color: rgb(165, 164, 164);
+                }
+    
+                & input[type="password"]::placeholder,
+                & input[type="text"]::placeholder {
+                    color: rgb(165, 164, 164);
+                }
+    
+                & input[type="password"]:focus,
+                & input[type="text"]:focus {
+                    outline: 0;
+                    border: 1px solid #a1a1a1;
+                }
+    
+                & input[type="submit"] {
+                    width: 32rem;
+    
+                    margin-top: 1rem;
+                    height: 3rem;
+    
+                    border: none;
+                    border-radius: .6rem;
+    
+                    background-color: #3c96ed;
+                    color: #fff;
+    
+                    font-size: 1.6rem;
+                    font-weight: bold;
+    
+                    cursor: pointer;
+                }
+            }
+    
+            & .infobox {
+                background-color: #fff;
+                height: 6rem;
+    
+                border: 1px solid rgb(236, 234, 234);
+    
+                margin: 1rem auto 0;
+    
+                display: flex;
+    
+                justify-content: center;
+                align-items: center;
+    
+                & p {
+    
+                    & a {
+                        font-weight: bold;
+                        user-select: none;
                     }
                 }
             }
+    
+            & .get-app-panel {
+                margin-top: 2rem;
+                text-align: center;
+    
+                & .app-buttons {
+                    margin-top: 1.6rem;
+    
+                    & img {
+                        height: 4rem;
+                        padding: 0 2px;
+                    }
+                }
+            }
+        }
     }
 
     & #container-signup {
@@ -348,21 +349,50 @@ body{
 
 @media (max-width: 85rem) {
 
+    #wrapper{
+        & #container {
+            width: 70%;
+        
+        
+            & .left {
+                display: none;
+            }
 
-    #container {
-        flex-basis:content;
-        width: 70%;
+            & .right{
+                padding: 0;
 
-        & + .column{
-            display: none;
+                & .login-panel{
+                    min-width: 25rem;
+                    max-width: 50rem;
+
+                    margin: 0 auto;
+
+                    padding: 1rem;
+                }
+
+                & form{
+                    min-width: 25rem;
+                    max-width: 50rem;
+                }
+
+                & .infobox{
+                    min-width: 25rem;
+                    max-width: 50rem;
+                }
+            }
         }
-
-        & .left{
-            display: none;
+    
+        footer {
+            max-width: 40rem;
+            margin: 0 auto;
+            text-align: center;
+    
+            & .footer-inner {
+                & a {
+                    font-size: 1.2rem;
+                }
+            }
         }
     }
-
-
-    
 }
 
